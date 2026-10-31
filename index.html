@@ -341,82 +341,63 @@
               resuelve un problema real.
             </p>
           </header>
-          <!-- PROYECTOS DE EJEMPLO: sustitúyelos por los tuyos.
-               - Cambia los href="#" por los enlaces reales (o borra el enlace si no existe).
-               - Cada enlace usa aria-describedby con el id de su título, para que el
-                 lector de pantalla diga "Ver demo, Gestor de reservas" y no solo "Ver demo".
-               - Para poner una captura: <img class="proyecto-imagen" src="captura.jpg" alt="Captura del gestor de reservas"> -->
+          <!-- PROYECTOS FICTICIOS: sirven para ver el diseño, pero no son trabajos reales.
+               Sustitúyelos por proyectos tuyos antes de publicar la web, porque un cliente
+               podría pedirte verlos.
+               - No llevan enlaces porque no existen: un href="#" lleva a ninguna parte y
+                 confunde, sobre todo a quien usa lector de pantalla.
+               - Cuando tengas enlaces reales, añade al final de .proyecto-cuerpo:
+                   <div class="proyecto-enlaces">
+                     <a href="URL-DEMO" aria-describedby="proy-1"><span data-i18n="proy.demo">Ver demo</span><span aria-hidden="true"> →</span></a>
+                     <a href="URL-GITHUB" aria-describedby="proy-1">GitHub<span aria-hidden="true"> →</span></a>
+                   </div>
+                 aria-describedby enlaza con el id del título, para que el lector de pantalla
+                 diga "Ver demo, Reservas para peluquería" y no solo "Ver demo".
+               - Para poner una captura: <img class="proyecto-imagen" src="imagenes/captura.jpg" alt="Captura de la agenda de reservas"> -->
           <div class="rejilla-3">
             <article class="tarjeta proyecto">
               <div class="proyecto-imagen" aria-hidden="true"></div>
               <div class="proyecto-cuerpo">
-                <h3 id="proy-1" data-i18n="proy.p1t">Gestor de reservas</h3>
+                <h3 id="proy-1" data-i18n="proy.p1t">Reservas para peluquería</h3>
                 <p data-i18n="proy.p1d">
-                  Aplicación para que un pequeño negocio gestione citas online y
-                  reciba avisos automáticos.
+                  Agenda online para un salón de belleza: los clientes eligen
+                  día y hora desde el móvil y reciben un recordatorio por email.
                 </p>
                 <ul class="proyecto-tags">
-                  <li>React</li>
+                  <li>JavaScript</li>
                   <li>Node.js</li>
                   <li>MongoDB</li>
                 </ul>
-                <div class="proyecto-enlaces">
-                  <a href="#" aria-describedby="proy-1"
-                    ><span data-i18n="proy.demo">Ver demo</span
-                    ><span aria-hidden="true"> →</span></a
-                  >
-                  <a href="#" aria-describedby="proy-1"
-                    >GitHub<span aria-hidden="true"> →</span></a
-                  >
-                </div>
               </div>
             </article>
             <article class="tarjeta proyecto">
               <div class="proyecto-imagen tono-oscuro" aria-hidden="true"></div>
               <div class="proyecto-cuerpo">
-                <h3 id="proy-2" data-i18n="proy.p2t">Tienda online</h3>
+                <h3 id="proy-2" data-i18n="proy.p2t">Carta digital con QR</h3>
                 <p data-i18n="proy.p2d">
-                  Catálogo de productos con carrito de compra, filtros y panel
-                  de administración.
+                  Menú para un restaurante que se abre escaneando un código QR.
+                  El dueño cambia platos y precios desde un panel, sin reimprimir.
                 </p>
                 <ul class="proyecto-tags">
-                  <li>JavaScript</li>
+                  <li>React</li>
                   <li>Express</li>
                   <li>SQL</li>
                 </ul>
-                <div class="proyecto-enlaces">
-                  <a href="#" aria-describedby="proy-2"
-                    ><span data-i18n="proy.demo">Ver demo</span
-                    ><span aria-hidden="true"> →</span></a
-                  >
-                  <a href="#" aria-describedby="proy-2"
-                    >GitHub<span aria-hidden="true"> →</span></a
-                  >
-                </div>
               </div>
             </article>
             <article class="tarjeta proyecto">
               <div class="proyecto-imagen tono-claro" aria-hidden="true"></div>
               <div class="proyecto-cuerpo">
-                <h3 id="proy-3" data-i18n="proy.p3t">Dashboard de métricas</h3>
+                <h3 id="proy-3" data-i18n="proy.p3t">Control de inventario</h3>
                 <p data-i18n="proy.p3d">
-                  Panel que reúne datos de varias fuentes y los muestra en
-                  gráficos fáciles de leer.
+                  Herramienta para una tienda de barrio que avisa cuando un
+                  producto se está agotando y genera informes de ventas.
                 </p>
                 <ul class="proyecto-tags">
                   <li>React</li>
+                  <li>Node.js</li>
                   <li>API REST</li>
-                  <li>Chart.js</li>
                 </ul>
-                <div class="proyecto-enlaces">
-                  <a href="#" aria-describedby="proy-3"
-                    ><span data-i18n="proy.demo">Ver demo</span
-                    ><span aria-hidden="true"> →</span></a
-                  >
-                  <a href="#" aria-describedby="proy-3"
-                    >GitHub<span aria-hidden="true"> →</span></a
-                  >
-                </div>
               </div>
             </article>
           </div>
@@ -600,15 +581,16 @@
         "proy.titulo": "Recent work",
         "proy.subtitulo":
           "Some projects built during my training. Each one solves a real problem.",
-        "proy.p1t": "Booking manager",
+        "proy.p1t": "Hair salon bookings",
         "proy.p1d":
-          "An app that lets a small business manage online appointments and send automatic reminders.",
-        "proy.p2t": "Online store",
+          "Online scheduling for a beauty salon: clients pick a day and time from their phone and get an email reminder.",
+        "proy.p2t": "QR digital menu",
         "proy.p2d":
-          "Product catalog with shopping cart, filters and an admin panel.",
-        "proy.p3t": "Metrics dashboard",
+          "A restaurant menu that opens by scanning a QR code. The owner updates dishes and prices from a dashboard, no reprinting needed.",
+        "proy.p3t": "Inventory tracker",
         "proy.p3d":
-          "A panel that gathers data from several sources and shows it in easy-to-read charts.",
+          "A tool for a neighborhood shop that warns when a product is running low and generates sales reports.",
+        // Se usará cuando los proyectos tengan enlaces (ver comentario en la sección Proyectos)
         "proy.demo": "Live demo",
         "proc.etiqueta": "How I work",
         "proc.titulo": "A simple, transparent process",
