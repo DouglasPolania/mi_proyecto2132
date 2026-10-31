@@ -1,0 +1,774 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="meta.titulo">
+      Douglas Polanía · Desarrollador Full Stack
+    </title>
+    <meta
+      name="description"
+      data-i18n-content="meta.descripcion"
+      content="Desarrollador Full Stack. Webs y aplicaciones a medida, con comunicación clara y entregas por fases."
+    />
+
+    <!-- Marca que JavaScript está activo. El CSS usa la clase .js para
+         mostrar el menú móvil y el selector de idioma solo cuando funcionan. -->
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+
+    <!-- Los estilos están en un archivo aparte para separar diseño y contenido -->
+    <link rel="stylesheet" href="estilos/style.css" />
+  </head>
+  <body>
+    <!-- Icono de WhatsApp definido una sola vez; se reutiliza con <use href="#icono-whatsapp"> -->
+    <svg class="sprite-iconos" width="0" height="0" aria-hidden="true">
+      <symbol id="icono-whatsapp" viewBox="0 0 24 24">
+        <path
+          fill="currentColor"
+          d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4c-1-1.6-1.5-3.4-1.5-5.2 0-5.4 4.4-9.8 9.8-9.8 2.6 0 5.1 1 6.9 2.9 1.8 1.8 2.9 4.3 2.9 6.9 0 5.4-4.4 9.8-9.8 9.8zM20.5 3.5C18.2 1.2 15.2 0 12 0 5.5 0 .2 5.3.2 11.9c0 2.1.5 4.1 1.6 5.9L0 24l6.3-1.7c1.7.9 3.7 1.4 5.7 1.4 6.6 0 11.9-5.3 11.9-11.9 0-3.2-1.2-6.2-3.4-8.3z"
+        />
+      </symbol>
+    </svg>
+
+    <a class="saltar" href="#contenido" data-i18n="a11y.saltar"
+      >Saltar al contenido</a
+    >
+
+    <!-- ============ CABECERA ============ -->
+    <header>
+      <div class="contenedor nav">
+        <a href="#inicio" class="logo">Douglas Polanía<span>.</span></a>
+
+        <nav aria-label="Principal" data-i18n-aria="a11y.nav">
+          <ul class="nav-links" id="menu-principal">
+            <li><a href="#sobre-mi" data-i18n="nav.sobre">Sobre mí</a></li>
+            <li>
+              <a href="#servicios" data-i18n="nav.servicios">Servicios</a>
+            </li>
+            <li>
+              <a href="#proyectos" data-i18n="nav.proyectos">Proyectos</a>
+            </li>
+            <li><a href="#contacto" data-i18n="nav.contacto">Contacto</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-acciones">
+          <div
+            class="idiomas"
+            role="group"
+            aria-label="Idioma"
+            data-i18n-aria="a11y.idioma"
+          >
+            <button
+              type="button"
+              data-lang="es"
+              lang="es"
+              aria-label="Español"
+              aria-pressed="true"
+            >
+              ES
+            </button>
+            <button
+              type="button"
+              data-lang="en"
+              lang="en"
+              aria-label="English"
+              aria-pressed="false"
+            >
+              EN
+            </button>
+          </div>
+          <button
+            type="button"
+            class="boton-menu"
+            aria-controls="menu-principal"
+            aria-expanded="false"
+            aria-label="Abrir menú"
+            data-i18n-aria="a11y.menu"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <path d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="contenido" tabindex="-1">
+      <!-- ============ HERO ============ -->
+      <section class="hero" id="inicio">
+        <div class="contenedor hero-grid">
+          <div>
+            <span class="etiqueta" data-i18n="hero.etiqueta"
+              >Desarrollador Full Stack</span
+            >
+            <h1 data-i18n-html="hero.titulo">
+              Convierto tus ideas en
+              <span class="resalte">webs y aplicaciones</span> que funcionan.
+            </h1>
+            <p class="subtitulo" data-i18n="hero.subtitulo">
+              Desarrollo proyectos web de principio a fin: desde la interfaz que
+              ven tus clientes hasta el servidor y la base de datos que hay
+              detrás. Con comunicación clara y entregas por fases.
+            </p>
+            <div class="hero-botones">
+              <!-- WHATSAPP: tu número va en el href (prefijo de país, sin "+" ni espacios).
+                   Está en 3 enlaces con la clase js-whatsapp: busca "wa.me/" para cambiarlos todos. -->
+              <a
+                class="btn btn-whatsapp js-whatsapp"
+                href="https://wa.me/34603130614"
+                target="_blank"
+                rel="noopener"
+              >
+                <svg aria-hidden="true"><use href="#icono-whatsapp" /></svg>
+                <span data-i18n="hero.cta">Escríbeme por WhatsApp</span>
+                <span class="sr-only" data-i18n="a11y.nuevaPestana">
+                  (se abre en una pestaña nueva)</span
+                >
+              </a>
+              <a
+                class="btn btn-secundario"
+                href="#proyectos"
+                data-i18n="hero.ver"
+                >Ver proyectos</a
+              >
+            </div>
+            <p class="disponible">
+              <span class="punto-verde" aria-hidden="true"></span
+              ><span data-i18n="hero.disponible"
+                >Disponible para nuevos proyectos</span
+              >
+            </p>
+          </div>
+
+          <div class="tarjeta-codigo" aria-hidden="true">
+            <div class="puntos"><i></i><i></i><i></i></div>
+            <div><span class="c-clave">const</span> developer = {</div>
+            <div>
+              &nbsp;&nbsp;name: <span class="c-texto">"Douglas Polanía"</span>,
+            </div>
+            <div>
+              &nbsp;&nbsp;role: <span class="c-texto">"Full Stack"</span>,
+            </div>
+            <div>
+              &nbsp;&nbsp;stack: [<span class="c-texto">"JS"</span>,
+              <span class="c-texto">"React"</span>,
+              <span class="c-texto">"Node"</span>],
+            </div>
+            <div>&nbsp;&nbsp;learning: <span class="c-clave">true</span>,</div>
+            <div>&nbsp;&nbsp;available: <span class="c-clave">true</span></div>
+            <div>};</div>
+            <div class="c-gris" data-i18n="hero.codigo">
+              // Listo para tu próximo proyecto
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ SOBRE MÍ ============ -->
+      <section id="sobre-mi">
+        <div class="contenedor sobre-grid">
+          <!-- Sustituye este bloque por: <img src="tu-foto.jpg" alt="Foto de Douglas Polanía" class="foto"> -->
+          <div class="foto" aria-hidden="true">DP</div>
+          <div class="sobre-texto">
+            <span class="etiqueta" data-i18n="sobre.etiqueta">Sobre mí</span>
+            <h2 data-i18n="sobre.titulo">
+              Un desarrollador que escucha antes de programar
+            </h2>
+            <p data-i18n="sobre.p1">
+              Soy desarrollador Full Stack y me estoy formando de forma continua
+              en las tecnologías que hoy usan las empresas. Me gusta entender
+              bien qué necesita cada cliente antes de escribir una sola línea de
+              código.
+            </p>
+            <p data-i18n="sobre.p2">
+              Trabajo con cercanía y transparencia: sabrás en todo momento en
+              qué punto está tu proyecto, qué falta y cuánto va a costar. Sin
+              tecnicismos innecesarios.
+            </p>
+            <ul class="valores">
+              <li class="valor">
+                <strong data-i18n="sobre.v1t">Cercanía</strong
+                ><span data-i18n="sobre.v1d"
+                  >Trato directo, sin intermediarios</span
+                >
+              </li>
+              <li class="valor">
+                <strong data-i18n="sobre.v2t">Claridad</strong
+                ><span data-i18n="sobre.v2d"
+                  >Presupuestos y plazos realistas</span
+                >
+              </li>
+              <li class="valor">
+                <strong data-i18n="sobre.v3t">Aprendizaje</strong
+                ><span data-i18n="sobre.v3d"
+                  >Siempre al día con buenas prácticas</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ SERVICIOS ============ -->
+      <section id="servicios" class="seccion-suave">
+        <div class="contenedor">
+          <header class="cabecera-seccion">
+            <span class="etiqueta" data-i18n="serv.etiqueta">Servicios</span>
+            <h2 data-i18n="serv.titulo">¿En qué puedo ayudarte?</h2>
+            <p class="subtitulo" data-i18n="serv.subtitulo">
+              Soluciones a medida para negocios, emprendedores y proyectos
+              personales.
+            </p>
+          </header>
+          <div class="rejilla-3">
+            <article class="tarjeta">
+              <div class="icono">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                >
+                  <rect x="3" y="4" width="18" height="14" rx="2" />
+                  <path d="M3 9h18M8 21h8" />
+                </svg>
+              </div>
+              <h3 data-i18n="serv.s1t">Landing pages y webs</h3>
+              <p data-i18n="serv.s1d">
+                Páginas rápidas, adaptadas a móvil y pensadas para que tus
+                visitantes te contacten.
+              </p>
+            </article>
+            <article class="tarjeta">
+              <div class="icono">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                >
+                  <path d="M8 6l-6 6 6 6M16 6l6 6-6 6" />
+                </svg>
+              </div>
+              <h3 data-i18n="serv.s2t">Aplicaciones web</h3>
+              <p data-i18n="serv.s2d">
+                Paneles, reservas, gestión de clientes… herramientas a medida
+                con usuarios y base de datos.
+              </p>
+            </article>
+            <article class="tarjeta">
+              <div class="icono">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                >
+                  <ellipse cx="12" cy="5" rx="8" ry="3" />
+                  <path
+                    d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"
+                  />
+                </svg>
+              </div>
+              <h3 data-i18n="serv.s3t">APIs y back-end</h3>
+              <p data-i18n="serv.s3d">
+                Servidores, integraciones con otros servicios y automatización
+                de tareas repetitivas.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ TECNOLOGÍAS ============ -->
+      <section id="tecnologias">
+        <div class="contenedor">
+          <header class="cabecera-seccion">
+            <span class="etiqueta" data-i18n="tec.etiqueta">Tecnologías</span>
+            <h2 data-i18n="tec.titulo">Con qué trabajo</h2>
+          </header>
+          <!-- Edita estas listas con las tecnologías que realmente estés usando -->
+          <div class="grupo-tec">
+            <h3>Front-end</h3>
+            <ul class="tecnologias">
+              <li class="chip">HTML5</li>
+              <li class="chip">CSS3</li>
+              <li class="chip">JavaScript</li>
+              <li class="chip">React</li>
+            </ul>
+          </div>
+          <div class="grupo-tec">
+            <h3>Back-end</h3>
+            <ul class="tecnologias">
+              <li class="chip">Node.js</li>
+              <li class="chip">Express</li>
+              <li class="chip">MongoDB</li>
+              <li class="chip">SQL</li>
+            </ul>
+          </div>
+          <div class="grupo-tec">
+            <h3 data-i18n="tec.herramientas">Herramientas</h3>
+            <ul class="tecnologias">
+              <li class="chip">Git</li>
+              <li class="chip">GitHub</li>
+              <li class="chip">VS Code</li>
+              <li class="chip">Figma</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ PROYECTOS ============ -->
+      <section id="proyectos" class="seccion-suave">
+        <div class="contenedor">
+          <header class="cabecera-seccion">
+            <span class="etiqueta" data-i18n="proy.etiqueta">Proyectos</span>
+            <h2 data-i18n="proy.titulo">Trabajo reciente</h2>
+            <p class="subtitulo" data-i18n="proy.subtitulo">
+              Algunos proyectos desarrollados durante mi formación. Cada uno
+              resuelve un problema real.
+            </p>
+          </header>
+          <!-- PROYECTOS DE EJEMPLO: sustitúyelos por los tuyos.
+               - Cambia los href="#" por los enlaces reales (o borra el enlace si no existe).
+               - Cada enlace usa aria-describedby con el id de su título, para que el
+                 lector de pantalla diga "Ver demo, Gestor de reservas" y no solo "Ver demo".
+               - Para poner una captura: <img class="proyecto-imagen" src="captura.jpg" alt="Captura del gestor de reservas"> -->
+          <div class="rejilla-3">
+            <article class="tarjeta proyecto">
+              <div class="proyecto-imagen" aria-hidden="true"></div>
+              <div class="proyecto-cuerpo">
+                <h3 id="proy-1" data-i18n="proy.p1t">Gestor de reservas</h3>
+                <p data-i18n="proy.p1d">
+                  Aplicación para que un pequeño negocio gestione citas online y
+                  reciba avisos automáticos.
+                </p>
+                <ul class="proyecto-tags">
+                  <li>React</li>
+                  <li>Node.js</li>
+                  <li>MongoDB</li>
+                </ul>
+                <div class="proyecto-enlaces">
+                  <a href="#" aria-describedby="proy-1"
+                    ><span data-i18n="proy.demo">Ver demo</span
+                    ><span aria-hidden="true"> →</span></a
+                  >
+                  <a href="#" aria-describedby="proy-1"
+                    >GitHub<span aria-hidden="true"> →</span></a
+                  >
+                </div>
+              </div>
+            </article>
+            <article class="tarjeta proyecto">
+              <div class="proyecto-imagen tono-oscuro" aria-hidden="true"></div>
+              <div class="proyecto-cuerpo">
+                <h3 id="proy-2" data-i18n="proy.p2t">Tienda online</h3>
+                <p data-i18n="proy.p2d">
+                  Catálogo de productos con carrito de compra, filtros y panel
+                  de administración.
+                </p>
+                <ul class="proyecto-tags">
+                  <li>JavaScript</li>
+                  <li>Express</li>
+                  <li>SQL</li>
+                </ul>
+                <div class="proyecto-enlaces">
+                  <a href="#" aria-describedby="proy-2"
+                    ><span data-i18n="proy.demo">Ver demo</span
+                    ><span aria-hidden="true"> →</span></a
+                  >
+                  <a href="#" aria-describedby="proy-2"
+                    >GitHub<span aria-hidden="true"> →</span></a
+                  >
+                </div>
+              </div>
+            </article>
+            <article class="tarjeta proyecto">
+              <div class="proyecto-imagen tono-claro" aria-hidden="true"></div>
+              <div class="proyecto-cuerpo">
+                <h3 id="proy-3" data-i18n="proy.p3t">Dashboard de métricas</h3>
+                <p data-i18n="proy.p3d">
+                  Panel que reúne datos de varias fuentes y los muestra en
+                  gráficos fáciles de leer.
+                </p>
+                <ul class="proyecto-tags">
+                  <li>React</li>
+                  <li>API REST</li>
+                  <li>Chart.js</li>
+                </ul>
+                <div class="proyecto-enlaces">
+                  <a href="#" aria-describedby="proy-3"
+                    ><span data-i18n="proy.demo">Ver demo</span
+                    ><span aria-hidden="true"> →</span></a
+                  >
+                  <a href="#" aria-describedby="proy-3"
+                    >GitHub<span aria-hidden="true"> →</span></a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ PROCESO ============ -->
+      <section id="proceso">
+        <div class="contenedor">
+          <header class="cabecera-seccion">
+            <span class="etiqueta" data-i18n="proc.etiqueta">Cómo trabajo</span>
+            <h2 data-i18n="proc.titulo">Un proceso sencillo y transparente</h2>
+          </header>
+          <!-- Lista ordenada: el lector de pantalla anuncia "paso 1 de 4", etc.
+               Los números grandes son decorativos. -->
+          <ol class="rejilla-4">
+            <li>
+              <div class="paso-numero" aria-hidden="true">01</div>
+              <h3 data-i18n="proc.p1t">Hablamos</h3>
+              <p class="subtitulo" data-i18n="proc.p1d">
+                Me cuentas tu idea por WhatsApp y resolvemos dudas.
+              </p>
+            </li>
+            <li>
+              <div class="paso-numero" aria-hidden="true">02</div>
+              <h3 data-i18n="proc.p2t">Propuesta</h3>
+              <p class="subtitulo" data-i18n="proc.p2d">
+                Te envío alcance, plazos y presupuesto cerrado.
+              </p>
+            </li>
+            <li>
+              <div class="paso-numero" aria-hidden="true">03</div>
+              <h3 data-i18n="proc.p3t">Desarrollo</h3>
+              <p class="subtitulo" data-i18n="proc.p3d">
+                Avanzamos por fases y ves el progreso en cada una.
+              </p>
+            </li>
+            <li>
+              <div class="paso-numero" aria-hidden="true">04</div>
+              <h3 data-i18n="proc.p4t">Entrega</h3>
+              <p class="subtitulo" data-i18n="proc.p4d">
+                Publicamos el proyecto y te explico cómo usarlo.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ============ CONTACTO ============ -->
+      <section id="contacto">
+        <div class="contenedor">
+          <div class="cta">
+            <h2 data-i18n="cta.titulo">¿Tienes un proyecto en mente?</h2>
+            <p class="subtitulo" data-i18n="cta.subtitulo">
+              Cuéntamelo sin compromiso. Te respondo personalmente y te digo
+              cómo podemos hacerlo realidad.
+            </p>
+            <a
+              class="btn btn-whatsapp js-whatsapp"
+              href="https://wa.me/34603130614"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg aria-hidden="true"><use href="#icono-whatsapp" /></svg>
+              <span data-i18n="cta.boton">Hablemos por WhatsApp</span>
+              <span class="sr-only" data-i18n="a11y.nuevaPestana">
+                (se abre en una pestaña nueva)</span
+              >
+            </a>
+            <p class="cta-nota" data-i18n="cta.nota">
+              Respuesta habitual en menos de 24 horas.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer>
+      <div class="contenedor footer-flex">
+        <p>
+          © <span id="anio">2026</span> Douglas Polanía ·
+          <span data-i18n="footer.texto">Desarrollador Full Stack</span>
+        </p>
+        <!-- Pon aquí la URL de tus perfiles -->
+        <ul class="redes">
+          <li>
+            <a href="https://github.com/" target="_blank" rel="noopener"
+              >GitHub<span class="sr-only" data-i18n="a11y.nuevaPestana">
+                (se abre en una pestaña nueva)</span
+              ></a
+            >
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener"
+              >LinkedIn<span class="sr-only" data-i18n="a11y.nuevaPestana">
+                (se abre en una pestaña nueva)</span
+              ></a
+            >
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- Botón flotante de WhatsApp (visible en toda la página) -->
+    <a
+      class="whatsapp-flotante js-whatsapp"
+      href="https://wa.me/34603130614"
+      target="_blank"
+      rel="noopener"
+      aria-label="Escríbeme por WhatsApp (se abre en una pestaña nueva)"
+      data-i18n-aria="a11y.whatsapp"
+    >
+      <svg aria-hidden="true"><use href="#icono-whatsapp" /></svg>
+    </a>
+
+    <script>
+      /* ===========================
+       TRADUCCIÓN
+       El español vive SOLO en el HTML: edítalo allí directamente.
+       Aquí solo está el inglés. Cada clave corresponde a un atributo del HTML:
+         data-i18n          → cambia el texto
+         data-i18n-html     → cambia el contenido con etiquetas (p. ej. el <span> del título)
+         data-i18n-aria     → cambia el aria-label (texto para lectores de pantalla)
+         data-i18n-content  → cambia el atributo content (la meta description)
+       Si añades un texto nuevo en el HTML, añade aquí su versión en inglés.
+       Si se te olvida, la consola del navegador (F12) te avisará.
+       =========================== */
+      const ingles = {
+        "meta.titulo": "Douglas Polanía · Full Stack Developer",
+        "meta.descripcion":
+          "Full Stack Developer. Custom websites and applications, with clear communication and phased deliveries.",
+        "a11y.saltar": "Skip to content",
+        "a11y.nav": "Main",
+        "a11y.idioma": "Language",
+        "a11y.menu": "Open menu",
+        "a11y.nuevaPestana": " (opens in a new tab)",
+        "a11y.whatsapp": "Message me on WhatsApp (opens in a new tab)",
+        "nav.sobre": "About",
+        "nav.servicios": "Services",
+        "nav.proyectos": "Projects",
+        "nav.contacto": "Contact",
+        "hero.etiqueta": "Full Stack Developer",
+        "hero.titulo":
+          'I turn your ideas into <span class="resalte">websites and apps</span> that work.',
+        "hero.subtitulo":
+          "I build web projects end to end: from the interface your customers see to the server and database behind it. With clear communication and phased deliveries.",
+        "hero.cta": "Message me on WhatsApp",
+        "hero.ver": "See projects",
+        "hero.disponible": "Available for new projects",
+        "hero.codigo": "// Ready for your next project",
+        "sobre.etiqueta": "About me",
+        "sobre.titulo": "A developer who listens before coding",
+        "sobre.p1":
+          "I'm a Full Stack developer, continuously training in the technologies companies use today. I like to fully understand what each client needs before writing a single line of code.",
+        "sobre.p2":
+          "I work closely and transparently: you'll always know where your project stands, what's left and what it will cost. No unnecessary jargon.",
+        "sobre.v1t": "Approachable",
+        "sobre.v1d": "Direct contact, no middlemen",
+        "sobre.v2t": "Clarity",
+        "sobre.v2d": "Realistic budgets and timelines",
+        "sobre.v3t": "Growth",
+        "sobre.v3d": "Always up to date with best practices",
+        "serv.etiqueta": "Services",
+        "serv.titulo": "How can I help you?",
+        "serv.subtitulo":
+          "Tailored solutions for businesses, entrepreneurs and personal projects.",
+        "serv.s1t": "Landing pages & websites",
+        "serv.s1d":
+          "Fast, mobile-friendly pages designed to turn visitors into contacts.",
+        "serv.s2t": "Web applications",
+        "serv.s2d":
+          "Dashboards, bookings, client management… custom tools with users and a database.",
+        "serv.s3t": "APIs & back-end",
+        "serv.s3d":
+          "Servers, integrations with other services and automation of repetitive tasks.",
+        "tec.etiqueta": "Tech stack",
+        "tec.titulo": "What I work with",
+        "tec.herramientas": "Tools",
+        "proy.etiqueta": "Projects",
+        "proy.titulo": "Recent work",
+        "proy.subtitulo":
+          "Some projects built during my training. Each one solves a real problem.",
+        "proy.p1t": "Booking manager",
+        "proy.p1d":
+          "An app that lets a small business manage online appointments and send automatic reminders.",
+        "proy.p2t": "Online store",
+        "proy.p2d":
+          "Product catalog with shopping cart, filters and an admin panel.",
+        "proy.p3t": "Metrics dashboard",
+        "proy.p3d":
+          "A panel that gathers data from several sources and shows it in easy-to-read charts.",
+        "proy.demo": "Live demo",
+        "proc.etiqueta": "How I work",
+        "proc.titulo": "A simple, transparent process",
+        "proc.p1t": "We talk",
+        "proc.p1d":
+          "You tell me your idea on WhatsApp and we clear up any questions.",
+        "proc.p2t": "Proposal",
+        "proc.p2d": "I send you the scope, timeline and a fixed quote.",
+        "proc.p3t": "Development",
+        "proc.p3d":
+          "We move forward in phases and you see progress at each one.",
+        "proc.p4t": "Delivery",
+        "proc.p4d": "We launch the project and I show you how to use it.",
+        "cta.titulo": "Have a project in mind?",
+        "cta.subtitulo":
+          "Tell me about it, no strings attached. I'll reply personally and tell you how we can make it happen.",
+        "cta.boton": "Let's talk on WhatsApp",
+        "cta.nota": "I usually reply within 24 hours.",
+        "footer.texto": "Full Stack Developer",
+      };
+
+      // Mensaje que aparece ya escrito al abrir WhatsApp
+      const MENSAJE_WHATSAPP = {
+        es: "¡Hola! He visto tu web y me gustaría hablar sobre un proyecto.",
+        en: "Hi! I saw your website and I'd like to talk about a project.",
+      };
+
+      // Número de ejemplo: si sigue en algún enlace, se muestra un aviso rojo
+      const NUMERO_EJEMPLO = "34600000000";
+
+      // Cómo leer y escribir cada tipo de texto traducible
+      const tipos = [
+        {
+          selector: "[data-i18n]",
+          clave: (el) => el.dataset.i18n,
+          leer: (el) => el.textContent,
+          escribir: (el, v) => (el.textContent = v),
+        },
+        {
+          selector: "[data-i18n-html]",
+          clave: (el) => el.dataset.i18nHtml,
+          leer: (el) => el.innerHTML,
+          escribir: (el, v) => (el.innerHTML = v),
+        },
+        {
+          selector: "[data-i18n-aria]",
+          clave: (el) => el.dataset.i18nAria,
+          leer: (el) => el.getAttribute("aria-label"),
+          escribir: (el, v) => el.setAttribute("aria-label", v),
+        },
+        {
+          selector: "[data-i18n-content]",
+          clave: (el) => el.dataset.i18nContent,
+          leer: (el) => el.getAttribute("content"),
+          escribir: (el, v) => el.setAttribute("content", v),
+        },
+      ];
+
+      // Al cargar, se copia el español del HTML para poder volver a él
+      const espanol = {};
+      tipos.forEach((tipo) => {
+        document.querySelectorAll(tipo.selector).forEach((el) => {
+          const clave = tipo.clave(el);
+          if (!(clave in espanol)) espanol[clave] = tipo.leer(el);
+        });
+      });
+
+      const textos = { es: espanol, en: ingles };
+
+      function cambiarIdioma(idioma) {
+        const t = textos[idioma];
+        document.documentElement.lang = idioma;
+
+        tipos.forEach((tipo) => {
+          document.querySelectorAll(tipo.selector).forEach((el) => {
+            const clave = tipo.clave(el);
+            if (clave in t) {
+              tipo.escribir(el, t[clave]);
+            } else {
+              console.warn(`Falta la traducción "${clave}" (${idioma})`);
+            }
+          });
+        });
+
+        // Enlaces de WhatsApp: se conserva el número del HTML y se añade el mensaje
+        document.querySelectorAll(".js-whatsapp").forEach((a) => {
+          const base = a.href.split("?")[0];
+          a.href =
+            base + "?text=" + encodeURIComponent(MENSAJE_WHATSAPP[idioma]);
+        });
+
+        document.querySelectorAll(".idiomas button").forEach((b) => {
+          b.setAttribute("aria-pressed", b.dataset.lang === idioma);
+        });
+
+        try {
+          localStorage.setItem("idioma", idioma);
+        } catch (e) {}
+      }
+
+      document.querySelectorAll(".idiomas button").forEach((b) => {
+        b.addEventListener("click", () => cambiarIdioma(b.dataset.lang));
+      });
+
+      // Idioma inicial: el guardado, o el del navegador, o español
+      let idiomaInicial = null;
+      try {
+        idiomaInicial = localStorage.getItem("idioma");
+      } catch (e) {}
+      if (!textos[idiomaInicial]) {
+        idiomaInicial = (navigator.language || "es").startsWith("en")
+          ? "en"
+          : "es";
+      }
+      cambiarIdioma(idiomaInicial);
+
+      /* ===========================
+       MENÚ MÓVIL
+       =========================== */
+      const botonMenu = document.querySelector(".boton-menu");
+      const menu = document.getElementById("menu-principal");
+
+      function abrirMenu(abrir) {
+        botonMenu.setAttribute("aria-expanded", abrir);
+        menu.classList.toggle("abierto", abrir);
+      }
+
+      botonMenu.addEventListener("click", () => {
+        abrirMenu(botonMenu.getAttribute("aria-expanded") !== "true");
+      });
+      // Cerrar al elegir una sección
+      menu.addEventListener("click", (e) => {
+        if (e.target.closest("a")) abrirMenu(false);
+      });
+      // Cerrar con Escape y devolver el foco al botón
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && menu.classList.contains("abierto")) {
+          abrirMenu(false);
+          botonMenu.focus();
+        }
+      });
+
+      /* ===========================
+       COMPROBACIONES
+       =========================== */
+      const conNumeroEjemplo = [
+        ...document.querySelectorAll(".js-whatsapp"),
+      ].some((a) => a.href.includes(NUMERO_EJEMPLO));
+      if (conNumeroEjemplo) {
+        console.warn(
+          "WhatsApp: hay enlaces con el número de ejemplo. Busca 'wa.me/' en el HTML.",
+        );
+        const aviso = document.createElement("div");
+        aviso.className = "aviso-config";
+        aviso.textContent =
+          "⚠ Configura tu número de WhatsApp: los botones aún usan el número de ejemplo.";
+        document.body.prepend(aviso);
+      }
+
+      document.getElementById("anio").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
